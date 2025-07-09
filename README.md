@@ -6,6 +6,60 @@ A modern, easy-to-use GUI tool for Windows and Python to convert **Ford PCM/ECU 
 > *Screenshot: Ford VBF Converter GUI (Dark Theme)*
 
 ---
+## 🆕 What’s New (July 2025)
+
+### Major Improvements in This Release
+
+- **Multi-Region VBF Support**  
+  Converts **all** firmware/data regions from Ford `.vbf` files (not just the first). Output HEX is always 100% complete, even for complex VBFs.
+
+- **Live Metadata Display**  
+  - **Auto-parses and displays VBF info:** Version, part number, description, region table, and more, before conversion.
+  - **Highlight:** See start/end addresses and size of all data regions in the file.
+
+- **Modern, Professional UI**  
+  - **Dark Theme** (High-DPI and Retina-ready)
+  - **Drag & Drop Support:** Drop any `.vbf` onto the window to instantly load it.
+  - **Red Exit Button** for quick closing.
+  - **Copyable/Selectable fields** for power users.
+
+- **Sound Effects**  
+  - **Success and Error chimes** after conversion (loads `wav.wav` and `wav-4.wav` from the `/Sounds/` folder if present, otherwise uses system beep).
+  - **Sounds stop cleanly** if you close the window during playback.
+
+- **File Path and Extension Fixes**  
+  - **Output is always `.hex`** by default (drag/drop, file browse, or manual typing).
+  - **No file paths or headers** are ever added to your HEX output—only valid Intel HEX records.
+  - Handles both relative and absolute paths and checks for file existence.
+
+- **Better Input Validation & Error Handling**  
+  - **Input validation** for file existence, type, and output name before running.
+  - Improved error messages in the GUI and via popups.
+  - Handles corrupt or incomplete VBFs gracefully.
+
+- **Robust Cross-Platform Sound Handling**  
+  - Loads sound files using safe resource paths for Windows, Mac, and Linux.
+
+- **Ready for Power Users**  
+  - All UI fields are selectable and copyable.
+  - Output field is forced to `.hex` (unless you override).
+  - Drag-and-drop, file browse, or type paths directly.
+  - EXE is Windows only, Python script runs everywhere.
+
+---
+
+## Improvements & Changelog
+
+- Converts **all** data blocks in Ford VBF files (multi-region, not just first)
+- Modern, high-DPI dark UI with live firmware info, drag & drop, and copyable fields
+- Red “Exit” button for quick and safe quitting
+- Sound effects on success/error (with fallback to system beep if not found)
+- No file paths or extraneous headers ever included in output HEX files
+- Better validation for both input and output files, with error popups
+- Output filename is always `.hex` by default
+- Handles corrupt/incomplete VBFs and unusual files robustly
+- Improved user experience, with disabled convert button during processing
+- Cross-platform file path and sound resource handling
 
 ## Features
 
